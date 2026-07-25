@@ -1,3 +1,157 @@
+# API Documentation
+
+## Base URL
+```
+http://localhost:8000/api
+```
+
+## Dimensions Endpoints
+
+### Create Dimension
+```
+POST /dimensions/
+Content-Type: application/json
+
+{
+  "name": "Dimension Name",
+  "description": "Optional description",
+  "seed": 12345
+}
+```
+
+**Response:**
+```json
+{
+  "id": "uuid",
+  "name": "Dimension Name",
+  "description": "Optional description",
+  "seed": 12345,
+  "created_at": "2024-01-01T00:00:00",
+  "updated_at": "2024-01-01T00:00:00"
+}
+```
+
+### List Dimensions
+```
+GET /dimensions/
+```
+
+### Get Dimension
+```
+GET /dimensions/{dimension_id}
+```
+
+### Update Dimension
+```
+PUT /dimensions/{dimension_id}
+Content-Type: application/json
+
+{
+  "name": "Updated Name",
+  "description": "Updated description"
+}
+```
+
+### Delete Dimension
+```
+DELETE /dimensions/{dimension_id}
+```
+
+### Merge Dimensions
+```
+POST /dimensions/merge/
+Content-Type: application/json
+
+{
+  "source_dimension_id": "uuid1",
+  "target_dimension_id": "uuid2",
+  "merge_options": {}
+}
+```
+
+## Translation Endpoints
+
+### Translate Text
+```
+POST /translations/translate/
+Content-Type: application/json
+
+{
+  "text": "Hello World",
+  "source_language": "en",
+  "target_languages": ["ja", "es", "fr"]
+}
+```
+
+**Response:**
+```json
+{
+  "original_text": "Hello World",
+  "source_language": "en",
+  "translations": {
+    "ja": "こんにちは世界",
+    "es": "Hola Mundo",
+    "fr": "Bonjour le monde"
+  }
+}
+```
+
+### Get Supported Languages
+```
+GET /translations/languages/
+```
+
+### Get Language Info
+```
+GET /translations/languages/{language_code}
+```
+
+## Mods Endpoints
+
+### Create Mod
+```
+POST /mods/
+Content-Type: application/json
+
+{
+  "name": "My Mod",
+  "description": "My custom mod",
+  "version": "1.0.0",
+  "dimension_ids": ["uuid1", "uuid2"]
+}
+```
+
+### List Mods
+```
+GET /mods/
+```
+
+### Get Mod
+```
+GET /mods/{mod_id}
+```
+
+### Update Mod
+```
+PUT /mods/{mod_id}
+Content-Type: application/json
+
+{
+  "name": "Updated Mod Name",
+  "version": "2.0.0"
+}
+```
+
+### Delete Mod
+```
+DELETE /mods/{mod_id}
+```
+
+### Export Mod
+```
+POST /mods/{mod_id}/export/?export_format=jar
+```
+
 ## Version Endpoints
 
 ### Create Version
@@ -108,3 +262,18 @@ Supported formats:
 - `X.Y.Z-beta` (e.g., `1.0.0-beta`)
 - `X.Y.Z-rc` (e.g., `1.0.0-rc`)
 - `X.Y.Z-alpha.1` (e.g., `1.0.0-alpha.1`)
+
+## Health Check
+
+### API Status
+```
+GET /health
+```
+
+**Response:**
+```json
+{
+  "status": "ok",
+  "message": "Minecraft Mod Creator API is running"
+}
+```
