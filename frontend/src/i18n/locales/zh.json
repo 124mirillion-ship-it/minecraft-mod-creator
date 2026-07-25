@@ -1,0 +1,13 @@
+{
+  "welcome": "欢迎来到Minecraft模组创建器",
+  "description": "轻松创建您的自定义Minecraft模组。管理维度，创建方块并导出您的模组!",
+  "multiLanguage": "多语言支持",
+  "multiLanguageDesc": "支持50多种语言，由GPT-5支持",
+  "dimensions": "维度管理",
+  "dimensionsDesc": "创建、编辑、删除和合并维度",
+  "export": "导出模组",
+  "exportDesc": "将您的模组导出为.jar文件",
+  "editor": "可视化编辑器",
+  "editorDesc": "拖放界面，易于创建",
+  "getStarted": "开始使用"
+}
