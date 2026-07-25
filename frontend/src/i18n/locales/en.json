@@ -1,0 +1,13 @@
+{
+  "welcome": "Welcome to Minecraft Mod Creator",
+  "description": "Create your custom Minecraft mods with ease. Manage dimensions, create blocks, and export your mod!",
+  "multiLanguage": "Multi-Language Support",
+  "multiLanguageDesc": "Supports 50+ languages powered by GPT-5",
+  "dimensions": "Dimension Management",
+  "dimensionsDesc": "Create, edit, delete, and merge dimensions",
+  "export": "Mod Export",
+  "exportDesc": "Export your mod as a .jar file",
+  "editor": "Visual Editor",
+  "editorDesc": "Drag-and-drop interface for easy creation",
+  "getStarted": "Get Started"
+}
