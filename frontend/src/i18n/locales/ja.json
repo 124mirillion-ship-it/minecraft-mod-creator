@@ -1,0 +1,13 @@
+{
+  "welcome": "Minecraftモッド作成ツールへようこそ",
+  "description": "カスタムマインクラフトモッドを簡単に作成できます。ディメンションを管理し、ブロックを作成し、モッドをエクスポートしましょう!",
+  "multiLanguage": "多言語対応",
+  "multiLanguageDesc": "GPT-5による50以上の言語に対応",
+  "dimensions": "ディメンション管理",
+  "dimensionsDesc": "ディメンションの作成、編集、削除、合体",
+  "export": "モッドエクスポート",
+  "exportDesc": ".jarファイルとしてモッドをエクスポート",
+  "editor": "ビジュアルエディター",
+  "editorDesc": "ドラッグ&ドロップで簡単作成",
+  "getStarted": "始める"
+}
